@@ -1,0 +1,14 @@
+name: test
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    name: test1
+    runs-on: ubuntu-18.04
+    steps:
+      - name: Hello World
+        run: echo "Hello World"
+
