@@ -10,5 +10,14 @@ jobs:
     runs-on: ubuntu-18.04
     steps:
       - name: Hello World
-        run: echo "Hello World"
+      - uses: daikikatsuragawa/clasp-action@v1
+        with:
+          accessToken: ${{ secrets.ACCESS_TOKEN }}
+          idToken: ${{ secrets.ID_TOKEN }}
+          refreshToken: ${{ secrets.REFRESH_TOKEN }}
+          clientId: ${{ secrets.CLIENT_ID }}
+          clientSecret: ${{ secrets.CLIENT_SECRET }}
+          scriptId: ${{ secrets.SCRIPT_ID }}
+          command: 'push'
+        
 
