@@ -24,3 +24,4 @@ jobs:
       - name: Deploy
         run: |
           clasp push
+        working-directory: ./project1
